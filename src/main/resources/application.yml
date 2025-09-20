@@ -1,0 +1,19 @@
+spring:
+  elasticsearch:
+    uris: http://localhost:9200
+  ai:
+    google:
+      genai:
+        embedding:
+          project-id: your-project-id
+          api-key: your-api-key
+          text:
+            options:
+              model: gemini-embedding-001
+              dimensions: 768
+    vectorstore:
+      elasticsearch:
+        initialize-schema: true
+        index-name: product
+        dimensions: 768
+        similarity: cosine
